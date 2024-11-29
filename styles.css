@@ -357,3 +357,37 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
 }
+
+/* Responsive Design for Devices */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        margin: 2rem auto;
+    }
+    .carousel-item {
+        flex: 0 0 80%;
+        transform: rotateY(calc(var(--i) * 30deg)) translateZ(200px);
+    }
+    .content-section, .cards-section {
+        padding: 2rem 1rem;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    .carousel-item img {
+        height: 200px;
+    }
+    .content-section h2, .parallax h2, .parallax2 h2 {
+        font-size: 2rem;
+    }
+}
