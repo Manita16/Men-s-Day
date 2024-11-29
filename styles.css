@@ -358,36 +358,149 @@ body {
     object-fit: cover;
 }
 
-/* Responsive Design for Devices */
+/* Mobile-Friendly Styles for Devices with Width <= 768px */
 @media (max-width: 768px) {
-    .carousel-container {
-        width: 100%;
-        margin: 2rem auto;
+    /* General Body Styling */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
     }
-    .carousel-item {
-        flex: 0 0 80%;
-        transform: rotateY(calc(var(--i) * 30deg)) translateZ(200px);
-    }
-    .content-section, .cards-section {
-        padding: 2rem 1rem;
-    }
-    .card {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-}
 
-@media (max-width: 480px) {
+    /* Header */
     .header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin: 1rem 0;
     }
     .header p {
         font-size: 1rem;
+        padding: 0 1rem;
     }
+
+    /* Carousel Adjustments */
+    .carousel-container {
+        width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        transform-style: flat;
+        gap: 1rem;
+    }
+
+    .carousel-item {
+        flex: 0 0 80%; /* Fit cards within the screen width */
+        transform: none; /* Disable 3D rotation */
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+    }
+
     .carousel-item img {
-        height: 200px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
-    .content-section h2, .parallax h2, .parallax2 h2 {
-        font-size: 2rem;
+
+    /* Parallax Sections */
+    .parallax, .parallax2 {
+        background-attachment: scroll;
+        height: auto;
+        padding: 3rem 1rem;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+
+    .parallax h2, .parallax2 h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Cards Section */
+    .cards-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #FF6F61, #E94E77);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-content {
+        font-size: 1rem;
+        padding: 1rem;
+        color: white;
+    }
+
+    /* Book Section */
+    .book-container {
+        width: 100%;
+        overflow-x: scroll;
+        padding: 1rem;
+    }
+
+    .book {
+        width: 90%;
+        margin: 0 auto;
+        transform: none; /* Disable 3D effects */
+    }
+
+    .page {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1rem;
+        background: #fdfdfd;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .page img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Content Section */
+    .content-section {
+        padding: 1rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+        text-align: center;
     }
 }
